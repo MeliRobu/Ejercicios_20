@@ -1,32 +1,21 @@
 
-print("\n\t|||---HI! Welcome!---||| ")
-shoes =0
-ball= 0
-"""
-shoes= float(input("Type the cleats prices: "))
-ball= float(input("Type the ball price: "))
-bicycle= float(input("Type the bicycle price: "))
-thermos= float(input("Type the thermos price: "))
-"""
+print("\n\t|||---HI! Welcome! to the sport storage---||| ")
 product_list=[]
-for p in range(2):
-    product_name= input("Type the name of the product: ")
+expensive_product= []
+for p in range(6):
+    product_name= input("\nType the name of the sport product: ")
     product_price= float(input("Type the product price:"))
-    def dic():
-        p_n = product_name
-        p_p= product_price
-        return  {
-            "name" : p_n,
-            "price" : p_p
+    dic= { 
+            "Product name" : product_name,
+            "Product price" : product_price
             }
-    product_list.append(dic())
+    product_list.append(dic)
 
-for each_price in product_list:
-    prices = each_price["price"]
+for each_one in product_list:
+    prices = each_one["Product price"]
+    names = each_one["Product name"]
     if prices >=100000:
-        expensive=[prices]
-        print(expensive)
-        counter= len(expensive)
-        print (counter)
-    elif prices < 100000:
-        print ("There are not prices more than 100000")
+        print(f"\nThe product greater than 100000 are: \n=>{names.capitalize()}:{prices}")
+        expensive_product.append(prices)
+count= len(expensive_product)
+print(f"\n=>There is/are {count} expensive product(s)")
